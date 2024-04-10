@@ -92,27 +92,3 @@ public class Player {
     }
     
 }
-
-/*The printHand() function in your Player class calls another method: printCards(), which is defined within the Hand inner class. The purpose of printHand() is to display the cards that are currently in the player's hand.
-
-Here's how it works based on the code snippets you've provided:
-
-printHand() Method in Player Class: This method acts as a wrapper or a convenient way to access the Hand class's functionality from an instance of the Player class. When called, it simply delegates the action to the hand.printCards() method.
-
-printCards() Method in Hand Inner Class: This method iterates over the ArrayList<Card> named cards, which stores the cards in the hand. For each Card object in this list, it calls the printCard() method of the Card class, which returns a String representation of the card (e.g., "ACE of HEARTS"). Then, it uses System.out.println() to print this string to the console.
-
-java
-Copy code
-public void printCards() {
-    for (Card card: cards) {
-        System.out.println(card.printCard());
-    }
-}
-So, despite the printHand() method in the Player class not directly containing a System.out.println() statement, it relies on the printCards() method within the Hand class to actually print each card's details to the console. This is a good example of delegation, where the Player class delegates the responsibility of printing the hand to the Hand class, which in turn delegates the formatting of each card to the individual Card objects. This keeps your code modular and responsibilities well-distributed among your classes.
-
-
-
-
-
-
- */
